@@ -35,7 +35,7 @@ public class SecondChat extends AbstractGui {
                 double chatScale = VMChat.getGeneralConfig().getSettings().secondChatScale;
                 int width = MathHelper.ceil((float) this.getWidth() / chatScale);
                 RenderSystem.pushMatrix();
-                RenderSystem.translatef((float) ((int) (VMChat.getVars().getClient().getWindow().getGuiScaledWidth() - getWidth() - 2.0f * chatScale)), 0F, 0.0F);
+                RenderSystem.translatef((float) (VMChat.getVars().getClient().getWindow().getGuiScaledWidth() - getWidth() - 6.0f * chatScale), 0.0F, 0.0F);
                 RenderSystem.scaled(chatScale,chatScale,1.0F);
                 int lineIndex;
                 int ticks;
