@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "de.soup.vmchat.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinGuiChatNew"
+  ],
+  "injectors":{
+    "defaultRequire": 1
+  },
+  "refmap": "vmchat.mixin-refmap.json"
+}

@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+[[mods]]
+modId="vmchat"
+version="1.0.0"
+displayName="VMChat"
+authors="SoupDE"
+description=''''''
+
+[[dependencies.vmchat]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="CLIENT"
