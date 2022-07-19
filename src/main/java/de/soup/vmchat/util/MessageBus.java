@@ -26,10 +26,7 @@ public class MessageBus {
                 .sendMessage(new StringTextComponent((prefix) ? parseTextFormattingString(CHAT_PREFIX+" ") : "").append(message), Util.NIL_UUID);
     }
 
-    public static void sendFromClient(String message)
-    {
-        VMChat.getVars().getClientPlayer().chat(message);
-    }
+    public static void sendFromClient(String message) { VMChat.getVars().getClientPlayer().chat(message); }
 
     public static String parseTextFormattingString(String tfsMsg){
         String[] colorCodes = {"&0","&1","&2","&3","&4","&5","&6","&7","&8","&9","&a","&b","&c","&d","&e","&f","&k","&l","&m","&n","&o","&r"};

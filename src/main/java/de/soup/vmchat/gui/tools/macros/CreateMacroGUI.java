@@ -101,26 +101,10 @@ public class CreateMacroGUI extends Screen
             macroButton.setMessage(new StringTextComponent(preMacro.getKeys().get(0).getName().toUpperCase()));
             chosenKey = preMacro.getKeys().get(0);
 
-            if(preMacro.hasAddition(340))
-            {
-                addShiftButton.setMessage(new StringTextComponent("X"));
-                addShiftButton.changeFocus(true);
-            }
-            if(preMacro.hasAddition(341))
-            {
-                addCtrlButton.setMessage(new StringTextComponent("X"));
-                addCtrlButton.changeFocus(true);
-            }
-            if(preMacro.hasAddition(342))
-            {
-                addAltButton.setMessage(new StringTextComponent("X"));
-                addAltButton.changeFocus(true);
-            }
-            if(preMacro.isAutoSend())
-            {
-                autoSendButton.setMessage(new StringTextComponent("X"));
-                autoSendButton.changeFocus(true);
-            }
+            if(preMacro.hasAddition(340)) addShiftButton.onPress();
+            if(preMacro.hasAddition(341)) addCtrlButton.onPress();
+            if(preMacro.hasAddition(342)) addAltButton.onPress();
+            if(preMacro.isAutoSend()) autoSendButton.onPress();
         }
 
         addButton(new Button(this.width/2-160,this.height-32,150,20,new StringTextComponent("Cancel"),(b)->{VMChat.getVars().getClient().setScreen(new SelectMacroGUI(new StringTextComponent("select")));}));

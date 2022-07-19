@@ -4,6 +4,7 @@ import de.soup.vmchat.Reference;
 import de.soup.vmchat.command.commands.ChatFilterCommand;
 import de.soup.vmchat.command.commands.ChatMacroCommand;
 import de.soup.vmchat.command.commands.ChatSettingsCommand;
+import de.soup.vmchat.command.commands.ChatShortcutCommand;
 import de.soup.vmchat.util.MessageBus;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.event.ClickEvent;
@@ -22,6 +23,7 @@ public class CommandManager {
         commandList.add(new ChatFilterCommand());
         commandList.add(new ChatSettingsCommand());
         commandList.add(new ChatMacroCommand());
+        commandList.add(new ChatShortcutCommand());
     }
 
     public static void callCommand(String[] args)

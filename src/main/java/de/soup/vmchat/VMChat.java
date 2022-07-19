@@ -4,6 +4,7 @@ import de.soup.vmchat.command.CommandManager;
 import de.soup.vmchat.config.configs.filter.ChatFilterConfig;
 import de.soup.vmchat.config.configs.general.GeneralConfig;
 import de.soup.vmchat.config.configs.macro.MacroConfig;
+import de.soup.vmchat.config.configs.shortcut.ShortcutConfig;
 import de.soup.vmchat.event.EventManager;
 import de.soup.vmchat.util.Variables;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class VMChat
     private static ChatFilterConfig filterConfig;
     private static MacroConfig macroConfig;
     private static GeneralConfig generalConfig;
+    private static ShortcutConfig shortcutConfig;
 
     private static final Variables VARIABLES = new Variables();
 
@@ -51,6 +53,7 @@ public class VMChat
         generalConfig = new GeneralConfig(mainDirectory);
         filterConfig = new ChatFilterConfig(mainDirectory);
         macroConfig = new MacroConfig(mainDirectory);
+        shortcutConfig = new ShortcutConfig(mainDirectory);
     }
 
     public static Variables getVars(){return VARIABLES;}
@@ -58,4 +61,5 @@ public class VMChat
     public static ChatFilterConfig getFilterConfig() { return filterConfig; }
     public static MacroConfig getMacroConfig(){ return macroConfig; }
     public static GeneralConfig getGeneralConfig() { return generalConfig; }
+    public static ShortcutConfig getShortcutConfig(){ return shortcutConfig; }
 }
