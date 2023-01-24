@@ -8,4 +8,5 @@ public class GeneralSettings {
     public float secondChatUnFocusedHeight = 90;
     public float secondChatWidth = 292;
     public int maxChatLines = 250;
+    public boolean renderOwnName = true;
 }

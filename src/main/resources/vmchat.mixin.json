@@ -5,8 +5,11 @@
   "mixins": [
     "MixinGuiChatNew"
   ],
-  "injectors":{
+  "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "vmchat.mixin-refmap.json"
+  "refmap": "vmchat.mixin-refmap.json",
+  "client": [
+    "MixinPlayerRender"
+  ]
 }
