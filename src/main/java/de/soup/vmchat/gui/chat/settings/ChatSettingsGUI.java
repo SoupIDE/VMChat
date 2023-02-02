@@ -34,6 +34,7 @@ public class ChatSettingsGUI extends Screen {
         this.children.add(new Slider(width/2+5,80,130,20,new StringTextComponent("Focused height: "),new StringTextComponent("px"),20,180,config.secondChatFocusedHeight,false,true,(p)->{}));
         this.children.add(new Slider(width/2-135,110,130,20,new StringTextComponent("Unfocused height: "),new StringTextComponent("px"),20,180,config.secondChatUnFocusedHeight,false,true,(p)->{}));
         this.children.add(new Slider(width/2+5,110,130,20,new StringTextComponent("Width: "),new StringTextComponent("px"),40,320,config.secondChatWidth,false,true,(p)->{}));
+        this.children.add(new Slider(width/2-65,140,130,20,new StringTextComponent("Chat Limit: "),new StringTextComponent(" Lines"),50,1000,config.maxChatLines,false,true,(p)->{}));
     }
 
     @Override
@@ -91,6 +92,7 @@ public class ChatSettingsGUI extends Screen {
             case "Focused height: ": config.secondChatFocusedHeight = ((int)newValue);break;
             case "Unfocused height: ": config.secondChatUnFocusedHeight = ((int)newValue);break;
             case "Width: ": config.secondChatWidth = ((int)newValue);
+            case "Chat Limit: ": config.maxChatLines = ((int) newValue);break;
         }
         VMChat.getGeneralConfig().save();
     }
