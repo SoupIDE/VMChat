@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingRenderer.class)
-public class MixinPlayerRender {
+public abstract class MixinPlayerRender {
 
     @Inject(method = "shouldShowName(Lnet/minecraft/entity/Entity;)Z", at= @At("HEAD"), cancellable = true)
     public void canRenderName(Entity entity, CallbackInfoReturnable<Boolean> c) {
